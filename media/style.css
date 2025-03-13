@@ -1,0 +1,499 @@
+/* --------------------------------- 
+    Layout
+--------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color0: #E6F1Fa;
+  --main-color1: #D7E8F5;
+  --main-color2: #A6CCEB;
+  --main-color3: #76A9D3;
+  --main-color4: #4682B4;
+  --main-color5: #24669D;
+  --main-color6: #144B79;
+  
+  --alt-color2: #FFDAA8;
+  --alt-color3: #FFC87C;
+  --alt-color4: #FFB958;
+  --alt-color5: #F9A635;
+  --alt-color6: #D5820F;
+}
+
+body {
+  width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: Raleway, Tahoma, sans-serif;
+}
+
+header {
+  min-height: 80px !important;  
+  background-image: url('./car.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding-left: 200px;
+  margin-top: 20px;
+}
+
+/* --------------------------------- 
+    Menu
+--------------------------------- */
+
+nav {
+  background-color: steelblue;
+  margin-top: 5px;
+}
+
+nav ul, nav li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 5px 20px;
+  font: 14pt 'Open Sans';
+  border-right: 2px solid white;
+}
+nav a:link, nav a:visited {
+  color: white;
+  background-color: steelblue;
+  text-decoration: none;
+}
+nav a:hover, nav a:active {
+  color: #144B79;
+  background-color: #A6CCEB; 
+  text-decoration: none;
+}
+
+/* --------------------------------- 
+    Side Menu
+--------------------------------- */
+aside  ul {
+  display: block;
+  padding: 0;
+  margin: 25px 0px;
+}
+aside  li {
+  display: block;
+  padding: 0;
+  margin: 5px 0px;
+  list-style: none;
+}
+
+aside li p {
+  display: none;
+}
+
+aside a {
+  display: block;
+  font: 500 normal 14pt Dosis;
+  padding: 3px 6px;
+  max-width: 200px;
+  margin-right: auto;
+}
+aside a:link, aside a:visited {
+  text-decoration: none;
+  color: steelblue;
+  border-bottom: 2px dotted white;
+}
+aside a:hover, aside a:active {
+  text-decoration: none;
+  color: steelblue;
+  border-bottom: 2px dotted steelblue;
+}
+
+/* --------------------------------- 
+    Sections
+--------------------------------- */
+main {
+  overflow-x: auto;
+}
+section {
+  padding: 5px 0px;  
+  margin: 5px 0px;
+  border-top: 1px solid #A6CCEB;
+  overflow-x: auto;
+}
+
+section.thumb {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+section.thumb img {
+  display: block;
+  max-width: 100%;
+  max-height: 180px;
+  margin: 0px auto;
+}
+
+section.boxes {
+  border-top: 0;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+div.box {
+  padding: 10px;  
+  margin: 0;
+  border: 2px solid #E6F1Fa;
+  border-radius: 10px;
+}
+
+div.box img {
+  display: block;
+  width: 90%;
+  max-width: 250px !important;
+  margin: 10px auto;
+}
+
+/* --------------------------------- 
+    Typography
+--------------------------------- */
+
+h1, h2, h3, h4 {
+  color: steelblue;
+  margin: 10px 0px;
+}
+h1 {
+  font: normal 24pt Dosis;
+  margin-top: 15px;
+}
+h2 {
+  font: 500 normal 20pt Dosis;
+}
+h3 {
+  font: 500 normal 18pt Dosis;
+}
+h4 {
+  font: 500 normal 16pt Dosis;
+}
+
+p, li {
+  font: normal 14pt Raleway;
+  margin: 5px 0px;
+}
+
+a {
+  color: #D5820F;
+  text-decoration: none;
+}
+a:visited {
+  color: #F9A635;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+p.figure {
+  font: normal small-caps 12pt Dosis;
+  color: gray;
+  text-align: center;
+}
+p.figure img {
+  width: 500px;
+}
+
+/* --------------------------------- 
+    Pages
+--------------------------------- */
+
+div.pages {
+  margin: 15px 0;
+}
+
+div.pages a, div.pages a:visited {
+  display: inline-block;
+  padding: 3px 6px;
+  margin-right: 6px;
+  min-width: 30px;
+  border: 2px solid #76A9D3;;
+  text-align: center;
+  font: bold 12pt Tahoma;
+  color: #D5820F;
+}
+div.pages a:hover {
+  background-color: #E6F1Fa;
+  text-decoration: none;
+}
+
+div.pages a.current {
+  background-color: #76A9D3;
+  color: #FFDAA8;
+}
+
+/* --------------------------------- 
+    Tables
+--------------------------------- */
+
+table {
+  border-collapse: collapse;
+  margin: 15px auto;
+}
+
+caption {
+  font: normal small-caps 16pt/20pt Dosis;
+  color: gray;
+  text-align: left;
+  margin: 10px 0px;
+  
+}
+tr {
+  border-top: 1px solid lightsteelblue;
+  border-bottom: 1px solid lightsteelblue;
+}
+tr:nth-child(2n+1) {
+  background-color: #f7f7f7;
+}
+th, td {
+  padding: 6px 12px;
+  text-align: left;
+}
+th {
+  font: bold 14pt Dosis;
+  color: #24669D;
+  background-color: #E6F1Fa;
+}
+td {
+  font: normal 14pt Dosis;
+  color: gray;
+}
+
+/* --------------------------------- 
+    Forms
+--------------------------------- */
+label {
+  display: block;
+  width: 100%;
+  padding: 6px 0px;
+  color: #335e82;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  padding: 6px 12px;
+  border: 2px solid #eee;
+  font: 12pt "Open sans";
+  border-radius: 5px;
+  color: #002222;
+  background-color: white;
+}
+
+option {
+  font: 12pt Tahoma;
+}
+
+input[type="submit"] {
+  background-color: #E6F1Fa;
+  color: steelblue;
+  font-weight: bold;
+  border: 2px solid steelblue;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: steelblue;
+  color: white;
+  border: 2px solid steelblue;
+  transition: all 0.3s ease-in-out;
+}
+
+button {
+  background-color: #E6F1Fa;
+  color: steelblue;
+  font-weight: bold;
+  border: 2px solid steelblue;
+  transition: all 0.3s ease-in-out;
+  padding: 4px 15px;
+}
+
+button:hover {
+  background-color: steelblue;
+  color: white;
+  border: 2px solid steelblue;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  padding: 6px 12px;
+  border: 2px solid #eee;
+  font: 12pt "Open sans";
+  border-radius: 5px;
+  color: #002222;
+  resize: vertical;
+  height: 120px;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid white;
+  outline: 2px solid lightsteelblue;
+}
+
+form {
+  display: block;
+  width: 100%;
+  margin: 30px 0;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 430px) {
+  form.narrow {
+    display: block;
+    width: 400px;
+    margin: 30px auto;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+}
+
+/* --------------------------------- 
+    RWD
+--------------------------------- */
+
+div.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+@media screen and (max-width: 600px) {
+  p.figure img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .auto-overflow {
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  aside li p {
+    display: block;
+  }
+  
+  body {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  header {
+    padding-left: 240px;
+    margin-top: 20px;
+  }
+
+  div.grid-container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  section.thumb {
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 30px;
+  }
+  
+  section.thumb img {
+    max-height: 120px;
+    margin: 0px 0px 0px auto;
+  }
+
+  section.boxes {
+    border-top: 0;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10px;
+  }
+}
+
+/* --------------------------------- 
+    Print
+--------------------------------- */
+
+@media print {
+  header, nav, aside {
+    display: none;
+  }
+  
+  .no-print {
+    display: none;
+}
+  
+  p.figure img {
+    width: auto;
+    max-height: 500px;
+  }
+}
+
+
+/* --------------------------------- 
+    OTHERS
+--------------------------------- */
+
+        /* Stylowanie modala */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-button:hover {
+            background-color: #45a049;
+        }
